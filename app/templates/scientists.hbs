@@ -1,0 +1,13 @@
+{{#paper-toolbar}}
+  <div class="md-toolbar-tools">
+    {{#paper-sidenav-toggle as |toggle|}}
+      {{#paper-button target=toggle action="toggleMenu" icon-button=true}}{{paper-icon "menu"}}{{/paper-button}}
+    {{/paper-sidenav-toggle}}
+    <span class="md-breadcrumb-page">Scientists</span>
+  </div>
+{{/paper-toolbar}}
+
+{{#paper-content class="md-padding"}}
+  {{people-list title="list of SCHIENTISHTS" people=model}}
+  {{#link-to "tasks"}}Click here to see tasks{{/link-to}}
+{{/paper-content}}

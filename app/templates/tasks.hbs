@@ -1,0 +1,18 @@
+{{#paper-toolbar}}
+  <div class="md-toolbar-tools">
+    {{#paper-sidenav-toggle as |toggle|}}
+      {{#paper-button target=toggle action="toggleMenu" icon-button=true}}{{paper-icon "menu"}}{{/paper-button}}
+    {{/paper-sidenav-toggle}}
+    <span class="md-breadcrumb-page">Tasks</span>
+  </div>
+{{/paper-toolbar}}
+
+{{#paper-content class="md-padding"}}
+  <section>
+    <ul class="task-list">
+      <li class="task">Uno</li>
+      <li class="task">Dos</li>
+      <li class="task">Tres</li>
+    </ul>
+  </section>
+{{/paper-content}}

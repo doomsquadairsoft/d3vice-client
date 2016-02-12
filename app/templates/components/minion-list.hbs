@@ -1,0 +1,18 @@
+{{yield}}
+
+<h2>{{title}}</h2>
+
+
+{{#paper-content class="md-whiteframe-z1 minion-list"}}
+  {{#paper-list}}
+    {{#each minions as |minion|}}
+      {{#paper-item class="md-3-line"}}
+        <img src="{{minion.image}}" class="md-avatar">
+        <div class="md-list-item-text">
+          <h3>{{minion.name}}</h3>
+          <p>{{minion.race}}</p>
+        </div>
+      {{/paper-item}}
+    {{/each}}
+  {{/paper-list}}
+{{/paper-content}}
