@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('network');
+
+  this.route('game', function() {
+    this.route('domination');
+  });
 });
 
 export default Router;

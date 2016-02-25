@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    //return ['Marie Curie', 'Mae Jemison', 'Albert Hofmann'];
-
-    return this.store.findAll('network');
+  actions: {
+    transitionTo(route) {
+      this.transitionTo(route);
+    }
   }
 });

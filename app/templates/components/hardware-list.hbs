@@ -1,0 +1,10 @@
+{{#each model as |hardware|}}
+  Name: {{hardware.name}}
+  Type: {{hardware.type}}
+  GPIO: {{hardware.gpio}}
+  Belongs to node: {{hardware.node}}
+{{/each}}
+
+{{#unless model}}
+create a hardware:  <button type="button" {{action "addOne"}}>create</button>
+{{/unless}}

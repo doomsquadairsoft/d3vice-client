@@ -1,5 +1,32 @@
-Title:{{model.title}}<br>
-Text:{{model.text}}<br>
 
 
-{{outlet}}
+
+{{#paper-toolbar}}
+  <div class="md-toolbar-tools">
+    {{#paper-sidenav-toggle as |toggle|}}
+      {{#paper-button target=toggle action="toggleMenu" icon-button=true}}{{paper-icon "menu"}}{{/paper-button}}
+    {{/paper-sidenav-toggle}}
+    <span class="md-breadcrumb-page">Home</span>
+  </div>
+{{/paper-toolbar}}
+
+{{#paper-content class="md-padding"}}
+
+  {{#each model as |node|}}
+    ID: {{node.id}}<br>
+    nodeID: {{node.nodeId}}<br>
+    defaultProfile: {{node.defaultProfile}}<br>
+    Available hardware:
+    {{#each node.hardware as |hardware|}}
+      <ul>
+        <li>{{hardware.index}} {{hardware.name}}</li>
+      </ul>
+    {{/each}}
+    <br><br>
+  {{/each}}
+
+  <br><br>
+  create a hardware:  <button type="button" {{action "addOne"}}>create</button>
+
+  {{outlet}}
+{{/paper-content}}
